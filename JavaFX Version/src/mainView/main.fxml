@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.92" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainView.Controller">
+   <center>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="380.0" prefWidth="350.0">
+               <children>
+                  <Label text="Result" />
+                  <TextArea fx:id="resultTA" prefHeight="359.0" prefWidth="350.0" promptText="The result will showed here" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="290.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="80.0" prefWidth="180.0" spacing="20.0">
+                     <children>
+                        <Label text="句式" />
+                        <ChoiceBox fx:id="styleCB" prefWidth="120.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="77.0" prefWidth="180.0" spacing="20.0">
+                     <children>
+                        <Label text="行数" />
+                        <ComboBox fx:id="lineCB" editable="true" prefWidth="120.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="180.0" spacing="20.0">
+                     <children>
+                        <Label text="数量" />
+                        <TextField fx:id="countTF" prefWidth="120.0" text="1" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="createButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="143.0" text="生成" translateX="20.0">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin></Button>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   <top>
+      <ToolBar prefHeight="20.0" prefWidth="500.0" BorderPane.alignment="CENTER_RIGHT">
+        <items>
+          <Button fx:id="useNewButton" mnemonicParsing="false" text="更换原始素材" />
+            <Button fx:id="useDefaultButton" mnemonicParsing="false" text="使用默认素材" />
+            <Button fx:id="save" mnemonicParsing="false" text="保存" />
+        </items>
+         <padding>
+            <Insets left="270.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </ToolBar>
+   </top>
+</BorderPane>
